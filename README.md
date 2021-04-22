@@ -30,7 +30,7 @@
 5. Если вы реализуете поиск по сервису GitHub, то поиск должен осуществляться по двум объектам:
    1. [Репозитории](https://docs.github.com/en/rest/reference/search#search-repositories)
    2. [Пользователи](https://docs.github.com/en/rest/reference/search#search-users)
-6. Вся разработка должна вестись в собственном репозитории на GitHub
+6. Вся разработка должна вестись в собственном репозитории на GitHub, форкнутом от данного
 7. Как это примерно должно выглядеть:
    1. Главная страница
       ![](https://i.imgur.com/OE7ZA3H.png)
