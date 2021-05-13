@@ -1,0 +1,5 @@
+<div class="container" *ngFor="let usr of user.items">
+    <img [src]="usr.avatar_url">
+    <p>{{usr.login}}</p>
+    <a [href]="usr.html_url">Перейти на Github</a>
+</div>

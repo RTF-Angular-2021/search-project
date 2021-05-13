@@ -1,0 +1,6 @@
+<div class="container" *ngFor="let rep of repository.items">
+    <p>{{rep.name}}</p>
+    <a [href]="rep.html_url">Перейти на Github</a>
+    <p>Описание: {{rep.description}}</p>
+    <!-- <img [src]="rep.owner.avatar_url"> -->
+</div>

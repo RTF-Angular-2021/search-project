@@ -1,0 +1,14 @@
+<input class="search" [formControl]="findControl">
+<app-user [user]="user" *ngIf="user" [sortFromNewToOld]="sortFromNewToOld"
+[sortFromOldToNew]="sortFromOldToNew"></app-user>
+<app-repository [repository]="repository" *ngIf="repository" [sortFromNewToOld]="sortFromNewToOld"
+    [sortFromOldToNew]="sortFromOldToNew"></app-repository>
+<app-error *ngIf="error"></app-error>
+<div class="buttons__setting">
+    <button (click)="changeStatus(true)">open</button>
+    <button (click)="changeStatus(false)">close</button>
+</div>
+<app-settings [status]="showSettings" (checkValueSelect)="checkButton($event)" [count]="responseCount"></app-settings>
+<app-history></app-history>
+
+<!-- вынести search в отдельную компоненту -->

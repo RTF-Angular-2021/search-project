@@ -1,0 +1,13 @@
+.search {
+    width:800px;
+    display:block;
+    margin:50px auto;
+    border:1px solid #000;
+    height:30px;
+}
+
+.buttons__setting {
+    position:absolute;
+    top:20px;
+    right:20px;
+}
