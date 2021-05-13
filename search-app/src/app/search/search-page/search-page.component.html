@@ -1,0 +1,13 @@
+<div>
+    <input (input)="handleInput()" id="searchQuery" [(ngModel)]="searchQuery" placeholder="Search">
+    <button (click)="searchNew()">Search</button>
+</div>
+
+<div *ngIf="doDisplaySearchResult()" class="searchResults" (scroll)="onScroll($event)">
+    <div *ngFor="let item of foundItems">
+        <div>
+            <img src={{item.box_art_url}}>
+            {{item.name}} 
+        </div>
+    </div>
+</div>

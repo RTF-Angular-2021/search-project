@@ -1,0 +1,11 @@
+<div>
+    <label for="clientId">Client ID: </label>
+    <input id="clientId" [(ngModel)]="clientId" placeholder="your client ID">
+</div>
+
+<div>
+    <label for="clientSecret">Client Secret: </label>
+    <input id="clientSecret" [(ngModel)]="clientSecret" placeholder="your client Secret">
+</div>
+
+<button (click)="login()">Login</button>
