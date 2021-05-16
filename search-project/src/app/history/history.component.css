@@ -1,0 +1,12 @@
+.requests {
+  display:inline-block;
+  margin-right: 1%;
+  border-right:1px solid black;
+  height: 80px;
+  padding-right:1%;
+}
+
+h5,p {
+  margin-top:1%;
+  margin-bottom: 1%;
+}
