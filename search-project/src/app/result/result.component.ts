@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
+import {CardResult} from "../app.component";
 
 @Component({
   selector:'app-result',
@@ -7,5 +8,6 @@ import {Component} from '@angular/core';
 })
 export class ResultComponent{
 
+  @Input() card:CardResult;
 }
 

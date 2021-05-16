@@ -65,3 +65,26 @@ button:active{
   padding-left: 10%;
   padding-right: 10%;
 }
+
+.settings {
+  height: 80px;
+  border: 1px solid black;
+  background: lightblue;
+  padding:1%;
+}
+
+.object {
+  margin-top: 2%;
+}
+
+select {
+  width:20%;
+}
+
+.search-history {
+  height: 80px;
+  border: 1px solid black;
+  background: lightblue;
+  padding:1%;
+  display: none;
+}
