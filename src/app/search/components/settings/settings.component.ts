@@ -18,7 +18,7 @@ export class SettingsComponent {
   @Output()
   public checkValueSelect: EventEmitter<Settings> = new EventEmitter();
 
-  constructor() {}
+  constructor() { }
 
   public test(e: Event): void {
     for (let n in this.myEnum) {
@@ -26,7 +26,6 @@ export class SettingsComponent {
         this.checkValueSelect.emit(this.myEnum[n]);
       }
     }
-    
   }
 }
 

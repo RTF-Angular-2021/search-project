@@ -1,0 +1,28 @@
+.history {
+    border:3px solid #313A42;
+    width: 200px;
+    position:absolute;
+    top:50px;
+    left:30px;
+    text-align:center;
+    color: #fff;
+    background-color: #262D33;
+}
+
+.history button {
+    margin:20px 0 10px 0;
+    font-size:15px;
+    border-radius: 5px;
+    border: 0;
+    padding:5px;
+    cursor: pointer;
+}
+
+.history > p {
+    font-size:20px;
+    color: red;
+}
+
+.history__items {
+    cursor: pointer;
+}

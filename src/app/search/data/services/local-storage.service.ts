@@ -20,4 +20,12 @@ export class LocalStorageService {
       localStorage.setItem("data", JSON.stringify(this.allRowsInLocalStorage));
     }
   }
+
+  public removeFromLocalStorage(name: string): void {
+    localStorage.removeItem(name);
+  }
+
+  public getFromLocalStorage(name: string): any {
+    return localStorage.getItem(name);
+  }
 }

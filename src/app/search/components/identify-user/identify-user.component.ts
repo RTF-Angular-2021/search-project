@@ -1,7 +1,7 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { EMPTY, fromEvent, of } from 'rxjs';
+import { Component } from '@angular/core';
+import { of } from 'rxjs';
 import { IdentifyUserService } from '../../data/services/identify-user.service';
-import { filter, switchMap, debounceTime, catchError, tap, distinctUntilChanged, map } from 'rxjs/operators';
+import { switchMap, debounceTime, tap, distinctUntilChanged } from 'rxjs/operators';
 import { User } from '../../data/models/identify-user.model';
 import { Repository } from '../../data/models/repository.model';
 import { Settings } from '../settings/settings.component';
@@ -15,10 +15,10 @@ import { FormControl } from '@angular/forms';
 })
 export class IdentifyUserComponent {
 
-  public findControl = new FormControl();
+  public findControl: FormControl = new FormControl();
   public setting = Settings;
-  public user: User;
-  public repository: Repository;
+  public user: User = null;
+  public repository: Repository = null;
   public error: boolean = false;
   public isUserSearchActive: boolean = true;
   public isRepoSearchActive: boolean = false;
@@ -31,6 +31,7 @@ export class IdentifyUserComponent {
     private githubService: IdentifyUserService,
     private localStorageService: LocalStorageService
   ) { }
+
 
   public ngAfterViewInit(): void {
     this.findControl.valueChanges
@@ -49,23 +50,20 @@ export class IdentifyUserComponent {
         })
       )
       .subscribe(response => {
-        this.responseCount = response.total_count;
-        if (response && !response.total_count) {
-          this.error = true;
-        }
-        if (!this.user && !this.repository) {
-          this.isUserSearchActive ? this.user = response as User : this.repository = response as Repository; //переделать логику
-        } else {
+        if (response === null) {
           this.user = null;
           this.repository = null;
           this.error = false;
+        } else if (response !== null && response.total_count === 0) {
+          this.error = true;
         }
-      });
 
-    /* Ну будущее:
-присваивать налл не нужно, он и так по умолчанию стоит
-Всю эту логику желательно в сервисе держать, туда передавать nativeElement и все
-Когда юзер засетиться его получить из того же сервиса, например используя BehaviorSubject, подписавшись на юзера (или репозиторий если речь про репозиторий) */
+        if (this.isUserSearchActive && response !== null && response.total_count) {
+          this.user = response as User;
+        } else if(this.isRepoSearchActive && response !== null && response.total_count) {
+          this.repository = response as Repository;
+        } 
+      });
   }
 
   public checkButton(event: Event): void {

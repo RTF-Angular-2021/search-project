@@ -1,7 +1,7 @@
 <div class='history'>
     <p>История запросов:</p>
     <div *ngFor='let item of data'>
-        <div (click)="repeatAction(item.value)">{{item.value}}</div>
+        <div class="history__items" (click)="repeatAction(item.value)">{{item.value}}</div>
     </div>
     <button (click)="resetHistory()">Очистить историю</button>
 </div>

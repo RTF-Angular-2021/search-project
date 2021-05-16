@@ -28,7 +28,6 @@ export class RepositoryComponent implements OnInit {
   }
 
   public sortNormal() {
-    
     this.repository.items.sort((a, b) => parseInt(a.created_at) - parseInt(b.created_at));
   }
 

@@ -1,0 +1,31 @@
+.container__search {
+    width:800px;
+    border:1px solid #000;
+    height:40px;
+    display:block;
+    margin:0 auto;
+    border:3px solid #39434D;
+    border-radius: 15px;
+    background-color: #262D33;
+    color: #fff;
+    padding:20px;
+    box-sizing: border-box;
+    outline: none;
+    font-size:20px;
+}
+
+.container {
+    background-color: #262D33;
+    width: 900px;
+    height:120px;    
+    display:block;
+    margin:50px auto;
+    border-radius: 10px;
+}
+
+.container > p {
+    padding-top:10px;
+    color: #fff;
+    font-size:20px;
+    text-align:center;
+}
