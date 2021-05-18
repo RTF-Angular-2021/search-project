@@ -1,7 +1,7 @@
 <header class="header">
  <ul class="menu">
-   <li><button class="menu-btn" (click)="show()">Настройки</button></li>
-   <li><button class="menu-btn" (click)="show2()">История</button></li>
+   <li><button class="menu-btn" (click)="show_settings()">Настройки</button></li>
+   <li><button class="menu-btn" (click)="show_history()">История</button></li>
    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
  </ul>
 </header>
@@ -17,9 +17,9 @@
     </div>
     <div class="object">
       Объекта поиска:
-      <select name="objectType">
-        <option>Репозитории</option>
-        <option>Пользователи</option>
+      <select name="objectType" class="objectType">
+        <option value="rep" >Репозитории</option>
+        <option value="users">Пользователи</option>
       </select>
     </div>
   </div>
@@ -28,8 +28,8 @@
   </div>
   <div class="content">
   <div class="search">
-    <input class="input" type="text" placeholder="Введите запрос">
-    <button class="search-button">Найти</button>
+    <input class="input" type="text" placeholder="Введите запрос" >
+    <button class="search-button" (click)="search_request()">Найти</button>
   </div>
   <div class="result">
     <app-result *ngFor="let card of cards" [card]="card" ></app-result>
