@@ -15,3 +15,7 @@
 .settings h3 {
     color: red;
 }
+
+option[selected] {
+    background-color: red;
+}

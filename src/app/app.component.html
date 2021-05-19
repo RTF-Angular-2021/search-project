@@ -1,1 +1,14 @@
-<app-identify-user></app-identify-user>
+<app-search [(searchControl)]="findControl"></app-search>
+<app-user [title]="searchTitleUser" [(changing)]="changingValue" [user]="user" *ngIf="user"
+    [sortFromNewToOld]="sortFromNewToOld" [sortFromOldToNew]="sortFromOldToNew" [sortRelev]="sortRelev">
+</app-user>
+<app-repository [sortRelev]="sortRelev" [title]="searchTitleRepo" [(changing)]="changingValue" [repository]="repository"
+    *ngIf="repository" [sortFromNewToOld]="sortFromNewToOld" [sortFromOldToNew]="sortFromOldToNew"></app-repository>
+<app-error *ngIf="error"></app-error>
+<div class="buttons__setting">
+    <button (click)="changeStatus(true)">Открыть настройки</button>
+    <button (click)="changeStatus(false)">Закрыть</button>
+</div>
+<app-settings [sortFromNewToOld]="sortFromNewToOld" [sortFromOldToNew]="sortFromOldToNew" [status]="showSettings"
+    (checkValueSelect)="checkButton($event)" [count]="responseCount"></app-settings>
+<app-history (repeat)="send($event)"></app-history>

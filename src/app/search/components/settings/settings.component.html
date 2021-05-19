@@ -1,18 +1,19 @@
 <div class="settings" *ngIf="status">
     Кол-во соответствий с запросом: {{count}}
     <div>
-        <h3>Внимание! Установки вступят в силу со следующего запроса</h3>
+        <h3>Внимание! Некоторые установки вступят в силу со следующего запроса</h3>
         <label>Поиск по: </label>
-        <select (change)="test($event)">
+        <select (change)="setCurrentSelect($event)">
             <option>{{myEnum.users}}</option>
             <option>{{myEnum.repository}}</option>
         </select>
     </div>
     <div>
         <label>Сортировка по:</label>
-        <select (change)="test($event)">
+        <select (change)="setCurrentSelect($event)">
             <option>{{myEnum.oldToNew}}</option>
             <option>{{myEnum.newToOld}}</option>
+            <option>{{myEnum.relevance}}</option>
         </select>
     </div>
 </div>

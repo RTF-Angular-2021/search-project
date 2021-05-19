@@ -1,6 +1,7 @@
-export class Repository {
-    total_count: number;
-    items: [
+//названия соответствуют тому response что приходит, поэтому не по стайл гайду
+export class RepositoryModel {
+    public total_count: number;
+    public items: [
         {
             id: number,
             name: string,

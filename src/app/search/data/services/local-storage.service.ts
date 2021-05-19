@@ -10,15 +10,14 @@ export class LocalStorageService {
   constructor() { }
 
   public addToLocalStorage(val: string, options: any): void {
-    console.log(options);
-    if (localStorage.getItem("data")) {
-      this.allRowsInLocalStorage = JSON.parse(localStorage.getItem("data"));
-      this.allRowsInLocalStorage.push({value: val}, options);
-      localStorage.setItem("data", JSON.stringify(this.allRowsInLocalStorage));
-    } else {
-      this.allRowsInLocalStorage.push({value: val}, options);
-      localStorage.setItem("data", JSON.stringify(this.allRowsInLocalStorage));
+    if (localStorage.getItem("data1")) {
+      this.allRowsInLocalStorage = JSON.parse(localStorage.getItem("data1"));
     }
+    if (val !== "") {
+      this.allRowsInLocalStorage.push({value: val, options});
+      localStorage.setItem("data1", JSON.stringify(this.allRowsInLocalStorage));
+    }
+    
   }
 
   public removeFromLocalStorage(name: string): void {

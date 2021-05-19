@@ -1,6 +1,7 @@
-export class User {
-    total_count: number;
-    items: [
+//названия соответствуют тому response что приходит, поэтому не по стайл гайду
+export class UserModel {
+    public total_count: number;
+    public items: [
         {
             login: string,
             id: number,

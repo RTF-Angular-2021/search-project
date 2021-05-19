@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { fromEvent, interval, Observable } from 'rxjs';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { fromEvent, interval } from 'rxjs';
+import { UserModel } from '../../data/models/identify-user.model';
+import { RepositoryModel } from '../../data/models/repository.model';
 import { IdentifyUserService } from '../../data/services/identify-user.service';
 import { LocalStorageService } from '../../data/services/local-storage.service';
 
@@ -12,6 +14,9 @@ export class HistoryComponent implements OnInit {
 
   public data: any[] = [];
 
+  @Output()
+  public repeat: EventEmitter<any> = new EventEmitter();
+
   constructor(
     private githubService: IdentifyUserService,
     private localStorageService: LocalStorageService
@@ -19,16 +24,31 @@ export class HistoryComponent implements OnInit {
 
   public ngOnInit(): void {
     fromEvent(window, 'storage')
-    interval(1000).subscribe(
-      () => this.data = JSON.parse(this.localStorageService.getFromLocalStorage("data"))
+    interval(500).subscribe(
+      () => this.data = JSON.parse(this.localStorageService.getFromLocalStorage("data1"))
     )
   }
 
   public resetHistory(): void {
-    this.localStorageService.removeFromLocalStorage("data");
+    this.localStorageService.removeFromLocalStorage("data1");
   }
 
-  public repeatAction(e: string): void {
-    this.githubService.getUser(e);
+  public repeatAction(e: string, id: number): void {
+    const options = JSON.parse(this.localStorageService.getFromLocalStorage("data1"))[id].options;
+    if (options.user) {
+      this.githubService.searchUser(JSON.parse(this.localStorageService.getFromLocalStorage("data1"))[id].value).subscribe(response => {
+        this.githubService.setUser(response as UserModel);
+      });
+      
+      this.repeat.emit([this.githubService.getUser(), id, options]);
+    } else if (options.repo) {
+      this.githubService.searchRepository(JSON.parse(this.localStorageService.getFromLocalStorage("data1"))[id].value).subscribe(response => {
+        this.githubService.setRepository(response as RepositoryModel);
+      });
+
+      this.repeat.emit([this.githubService.getRepo(), id, options])
+    }
+    
+
   }
 }
