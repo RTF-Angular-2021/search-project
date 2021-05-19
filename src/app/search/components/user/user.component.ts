@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Subject } from 'rxjs';
-import { UserModel } from 'src/app/search/data/models/identify-user.model';
+import { UserModel } from '../../../../app/search/data/models/identify-user.model';
 
 @Component({
   selector: 'app-user',
