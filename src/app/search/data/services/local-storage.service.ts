@@ -5,26 +5,42 @@ import { Injectable } from '@angular/core';
 })
 export class LocalStorageService {
 
-  public allRowsInLocalStorage: any[] = [];
-  
+  public allRowsInLocalStorage: IFromLocalStorage[] = [];
+
   constructor() { }
 
-  public addToLocalStorage(val: string, options: any): void {
+  public addToLocalStorage(value: string, options: IOptions): void {
+    const obj: IFromLocalStorage = {
+      value,
+      options
+    }
     if (localStorage.getItem("data1")) {
       this.allRowsInLocalStorage = JSON.parse(localStorage.getItem("data1"));
     }
-    if (val !== "") {
-      this.allRowsInLocalStorage.push({value: val, options});
+    if (value !== "") {
+      this.allRowsInLocalStorage.push(obj);
       localStorage.setItem("data1", JSON.stringify(this.allRowsInLocalStorage));
     }
-    
   }
 
   public removeFromLocalStorage(name: string): void {
     localStorage.removeItem(name);
   }
 
-  public getFromLocalStorage(name: string): any {
+  public getFromLocalStorage(name: string): string {
     return localStorage.getItem(name);
   }
+}
+
+
+export interface IFromLocalStorage {
+  value: string,
+  options: IOptions
+}
+
+export interface IOptions {
+  user: boolean,
+  repo: boolean,
+  normalSort: boolean,
+  reverseSort: boolean
 }

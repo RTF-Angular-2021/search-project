@@ -3,7 +3,7 @@ import { fromEvent, interval } from 'rxjs';
 import { UserModel } from '../../data/models/identify-user.model';
 import { RepositoryModel } from '../../data/models/repository.model';
 import { IdentifyUserService } from '../../data/services/identify-user.service';
-import { LocalStorageService } from '../../data/services/local-storage.service';
+import { IOptions, LocalStorageService } from '../../data/services/local-storage.service';
 
 @Component({
   selector: 'app-history',
@@ -62,10 +62,5 @@ export class HistoryComponent implements OnInit {
 export interface IRepeatAction {
   result: UserModel | RepositoryModel,
   id: number,
-  options: {
-    user: boolean,
-    repo: boolean,
-    normalSort: boolean,
-    reverseSoart: boolean
-  }
+  options: IOptions
 }
