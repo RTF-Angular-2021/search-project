@@ -1,4 +1,5 @@
 .container {
+    display:block;
     margin:100px auto;
     width:800px;
     height:420px;
@@ -8,6 +9,24 @@
     background-color: #262D33;
     box-sizing: border-box;
     position: relative;
+}
+
+
+.container p {
+    text-align:center;
+    font-size:25px;
+}
+
+.container a {
+    display:block;
+    font-size:25px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.container span {
+    color: red;
 }
 
 .container img {

@@ -18,17 +18,18 @@ export class SettingsComponent {
   @Output()
   public checkValueSelect: EventEmitter<Settings> = new EventEmitter();
   
-  @Input()
-  public sortFromNewToOld: boolean;
+  // @Input()
+  // public sortFromNewToOld: boolean;
 
-  @Input()
-  public sortFromOldToNew: boolean;
+  // @Input()
+  // public sortFromOldToNew: boolean;
 
   constructor() { }
 
   public setCurrentSelect(e: Event): void {
     for (let n in this.myEnum) {
       if (this.myEnum[n] === (e.target as HTMLTextAreaElement).value) {
+        console.log(this.myEnum[n])
         this.checkValueSelect.emit(this.myEnum[n]);
       }
     }

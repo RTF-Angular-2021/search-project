@@ -1,0 +1,19 @@
+<div>
+    <ng-container *ngIf="repository">
+        <div class="container" *ngFor="let rep of repository.items">
+            <p><span>Название репозитория:</span> {{rep.name}}</p>
+            <p><span>Описание:</span> {{rep.description}}</p>
+            <p><span>Создан:</span> {{rep.created_at | date}}</p>
+            <a [href]="rep.html_url">Перейти на Github</a>
+        </div>
+    </ng-container>
+    <div *ngIf="user">
+        <div class="container" *ngFor="let usr of user.items">
+            <img [src]="usr.avatar_url">
+            <div class="container__info">
+                <p>Имя пользователя: {{usr.login}}</p>
+                <a [href]="usr.html_url">Перейти на Github</a>
+            </div>
+        </div>
+    </div>
+</div>

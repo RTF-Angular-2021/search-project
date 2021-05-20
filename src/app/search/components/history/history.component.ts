@@ -33,22 +33,39 @@ export class HistoryComponent implements OnInit {
     this.localStorageService.removeFromLocalStorage("data1");
   }
 
-  public repeatAction(e: string, id: number): void {
+  public repeatAction(id: number): void {
     const options = JSON.parse(this.localStorageService.getFromLocalStorage("data1"))[id].options;
     if (options.user) {
       this.githubService.searchUser(JSON.parse(this.localStorageService.getFromLocalStorage("data1"))[id].value).subscribe(response => {
         this.githubService.setUser(response as UserModel);
       });
-      
-      this.repeat.emit([this.githubService.getUser(), id, options]);
+      const userObject: IRepeatAction = {
+        result: this.githubService.getUser(),
+        id,
+        options
+      }
+      this.repeat.emit(userObject);
     } else if (options.repo) {
       this.githubService.searchRepository(JSON.parse(this.localStorageService.getFromLocalStorage("data1"))[id].value).subscribe(response => {
         this.githubService.setRepository(response as RepositoryModel);
       });
-
-      this.repeat.emit([this.githubService.getRepo(), id, options])
+      const repoObject: IRepeatAction = {
+        result: this.githubService.getRepo(),
+        id,
+        options
+      }
+      this.repeat.emit(repoObject)
     }
-    
+  }
+}
 
+export interface IRepeatAction {
+  result: UserModel | RepositoryModel,
+  id: number,
+  options: {
+    user: boolean,
+    repo: boolean,
+    normalSort: boolean,
+    reverseSoart: boolean
   }
 }
