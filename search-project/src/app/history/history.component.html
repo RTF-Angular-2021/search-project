@@ -1,4 +1,6 @@
 <div class="requests">
-  <h5>{{request.title_request}}</h5>
-  <p>{{request.info}}</p>
+  <button (click)="callParent(request.request)">{{request.request}}</button>
+  <br>
+  <br>
+  <p>Всего найдено:{{request.count}}</p>
 </div>

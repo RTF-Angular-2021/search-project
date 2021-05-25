@@ -10,9 +10,9 @@
     <div>
       Сортировать по:
       <select name="sortType" class="sortType">
-        <option>Релевантности</option>
-        <option>Дате изменения/создания (новые-старые)</option>
-        <option>Дате изменения/создания (старые-новые)</option>
+        <option value="relevance">Релевантности</option>
+        <option value="new-old">Дате создания (новые-старые)</option>
+        <option value="old-new">Дате создания (старые-новые)</option>
       </select>
     </div>
     <div class="object">
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="search-history" [style.display]="visibility2?'block':'none'" >
-    <app-history *ngFor= "let request of historyRequests" [request]="request"></app-history>
+    <app-history *ngFor= "let request of historyRequests" [request]="request" (Event)="search_request()"></app-history>
   </div>
   <div class="content">
   <div class="search">
@@ -32,7 +32,7 @@
     <button class="search-button" (click)="search_request()">Найти</button>
   </div>
   <div class="result">
-    <app-result *ngFor="let card of cards" [card]="card" ></app-result>
+    <app-result *ngFor="let card of cards" [card]="card"></app-result>
   </div>
   </div>
 </div>

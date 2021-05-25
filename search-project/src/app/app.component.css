@@ -1,6 +1,6 @@
 .header {
   background-color: #5b6cca;
-  height: 50px;
+  height: 10%;
 }
 
 ul.menu {
@@ -87,4 +87,5 @@ select {
   background: lightblue;
   padding:1%;
   display: none;
+  overflow: auto;
 }
