@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ResultComponent } from "./result/result.component";
 import {HistoryComponent} from "./history/history.component";
 import {HttpService} from "./services/data.service";
+import {SortService} from "./services/sort.service";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,10 @@ import {HttpService} from "./services/data.service";
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HttpService],
+  providers: [
+    HttpService,
+    SortService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

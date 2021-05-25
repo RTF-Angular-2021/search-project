@@ -1,4 +1,4 @@
-import {Component,Input} from '@angular/core';
+import {Component, Input, Output,EventEmitter} from '@angular/core';
 import {History} from "../app.component";
 
 @Component({
@@ -9,4 +9,11 @@ import {History} from "../app.component";
 export class HistoryComponent{
 
   @Input() request:History;
+
+  @Output() Event = new EventEmitter<string>();
+
+  callParent(query): void {
+    document.querySelector("input").value = query;
+    this.Event.next();
+  }
 }

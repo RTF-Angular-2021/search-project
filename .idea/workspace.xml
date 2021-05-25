@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56940e37-1940-4dff-a8de-b2f616e2be7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/search-project/src/app/services/data.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search-project/src/app/services/sort.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-project/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search-project/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search-project/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search-project/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-project/src/app/history/history.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/history/history.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-project/src/app/history/history.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/history/history.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-project/src/app/history/history.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/history/history.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search-project/src/app/result/result.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/result/result.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-project/src/app/result/result.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/result/result.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search-project/src/app/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/search-project/src/app/services/data.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,12 @@
       <workItem from="1621169946051" duration="3275000" />
       <workItem from="1621185002734" duration="7243000" />
       <workItem from="1621249383198" duration="16101000" />
-      <workItem from="1621323353772" duration="15998000" />
+      <workItem from="1621323353772" duration="16608000" />
+      <workItem from="1621416369822" duration="21637000" />
+      <workItem from="1621497300600" duration="3661000" />
+      <workItem from="1621509140083" duration="1030000" />
+      <workItem from="1621519550224" duration="10205000" />
+      <workItem from="1621943868500" duration="15690000" />
     </task>
     <task id="LOCAL-00001" summary="create angular proj">
       <created>1620839260126</created>
@@ -123,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621192870065</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="httpRequests &amp; sortByObject">
+      <created>1621345617678</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1621345617678</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,20 +162,25 @@
     <MESSAGE value="first commit" />
     <MESSAGE value=" results update" />
     <MESSAGE value="function buttons update" />
-    <option name="LAST_COMMIT_MESSAGE" value="function buttons update" />
+    <MESSAGE value="httpRequests &amp; sortByObject" />
+    <option name="LAST_COMMIT_MESSAGE" value="httpRequests &amp; sortByObject" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621170469207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1621170469207" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1621192865075">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1621345613289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621192865075" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1621192901505">
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621345613289" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1621345628803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621192901505" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1621345628803" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1621423128321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1621423128321" />
   </component>
 </project>
