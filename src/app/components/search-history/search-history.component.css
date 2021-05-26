@@ -1,0 +1,35 @@
+.search-history {
+    border: 1px solid #a3a3a3;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333333;
+}
+
+.search-history .title {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.history-item {
+    border-top: 1px solid #a3a3a3;
+    padding: 10px;
+}
+
+.history-item:hover {
+    background-color: #e8e8e8;
+}
+
+.history-item:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.history-item:last-child:hover {
+    background-color: #fff;
+}
+
+.history-item button {
+    width: 100%;
+}

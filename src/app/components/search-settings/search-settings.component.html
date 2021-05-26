@@ -1,0 +1,50 @@
+<div class="col-2">
+    <div class="search-settings">
+        <p class="title">Настройки поиска</p>
+        <div class="settings">
+            <div class="search-type">
+                <p>Тип поиска</p>
+                <label>
+                    <input type="radio" name="search-type" value="users" [formControl]="searchType" />
+                    Пользователи
+                </label>
+                <label>
+                    <input type="radio" name="search-type" value="repositories" [formControl]="searchType" />
+                    Репозитории
+                </label>
+            </div>
+
+            <div *ngIf="searchType.value === 'users'" class="sort-type">
+                <p>Сортировка поиска</p>
+                <label>
+                    <input type="radio" name="sort-type" value="relevance" [formControl]="sortType" />
+                    По релевантности
+                </label>
+                <label>
+                    <input type="radio" name="sort-type" value="date_desc" [formControl]="sortType" />
+                    По дате регистрации (сначала новые)
+                </label>
+                <label>
+                    <input type="radio" name="sort-type" value="date_asc" [formControl]="sortType" />
+                    По дате регистрации (сначала старые)
+                </label>
+            </div>
+
+            <div *ngIf="searchType.value === 'repositories'" class="sort-type">
+                <p>Сортировка поиска</p>
+                <label>
+                    <input type="radio" name="sort-type" value="relevance" [formControl]="sortType" />
+                    По релевантности
+                </label>
+                <label>
+                    <input type="radio" name="sort-type" value="stars_desc" [formControl]="sortType" />
+                    Количество звезд (по убыванию)
+                </label>
+                <label>
+                    <input type="radio" name="sort-type" value="stars_asc" [formControl]="sortType" />
+                    Количество звезд (по возрастанию)
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

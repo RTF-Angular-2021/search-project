@@ -1,0 +1,13 @@
+<div class="col-2">
+    <div class="search-history">
+        <p class="title">История поиска</p>
+        <div class="historty-lsit" *ngFor="let item of history">
+            <div class="history-item">
+                {{item}}
+            </div>
+        </div>
+        <div *ngIf="history && history.length > 0" class="history-item">
+            <button type="button" class="btn btn-blue" (click)="clearHistory()">Очистить</button>
+        </div>
+    </div>
+</div>

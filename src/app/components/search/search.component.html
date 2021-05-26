@@ -1,0 +1,49 @@
+<div class="col-8 search-container">
+    <div class="search">
+        <label class="search-label" for="search-bar">GitHub Search</label>
+        <input class="search-bar" id="search-bar" type="text" [formControl]="searchInput">
+        <button class="btn btn-blue" type="submit" (click)="search()">Поиск</button>
+    </div>
+
+    <div *ngIf="settingsService.searchType === 'users'">
+        <div *ngFor="let user of users" class="results-container">
+            <div class="card">
+                <div class="card-title">
+                    {{user.type}}
+                </div>
+                <div class="card-body">
+                    <img class="avatar" src={{user.avatar_url}} alt={{user.login}}>
+                    <div class="info">
+                        <p class="title">{{user.login}}</p>
+                        <a class="btn btn-blue" [href]="user.html_url" target="_blank">Открыть профиль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="settingsService.searchType === 'repositories'">
+        <div *ngFor="let repository of repositories">
+            <div class="card">
+                <div class="card-title">
+                    <a [href]="repository.owner.html_url">@{{repository.owner.login}}</a> &mdash;
+                    {{repository.language}}
+                </div>
+                <div class="card-body">
+                    <div class="info">
+                        <p class="col-12">Описание: {{repository.description ? repository.description : "Нет описания"}}
+                        </p>
+                        <p class="col-3">Приватный: {{repository.private ? "да" : "нет"}}</p>
+                        <p class="col-9">Создан: {{repository.created_at}}</p>
+                        <p class="col-3">Звезд: {{repository.stargazers_count}}</p>
+                        <p class="col-9">Форков: {{repository.forks_count}}</p>
+                        <br>
+                        <a class="col-12 btn btn-blue" [href]="repository.html_url" target="_blank">Открыть
+                            репозиторий</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
