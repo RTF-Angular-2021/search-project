@@ -1,0 +1,59 @@
+.channel-wrapper {
+    background: rgb(39, 39, 39);
+    height: max-content;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 20px 0;
+}
+
+.channel {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.channel-name {
+    display: block;
+    width: max-content;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 13px 0;
+    transition: all 0.2s ease;
+}
+
+.channel-name:hover {
+    color: #8359d3;
+    transition: all 0.2s ease;
+}
+
+.container-channel-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.container-channel-info span {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container-channel-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.container-channel-desc span {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.channel-desc {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: auto;
+    text-align: right;
+}

@@ -1,0 +1,37 @@
+.item-wrapper {
+    background: rgb(39, 39, 39);
+    height: 100px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 20px 0;
+}
+
+.category {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.category-name {
+    display: block;
+    width: max-content;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 13px 0;
+    transition: all 0.2s ease;
+}
+
+.category-name:hover {
+    color: #8359d3;
+    transition: all 0.2s ease;
+}
+
+.container-category-id {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-category-id span {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}

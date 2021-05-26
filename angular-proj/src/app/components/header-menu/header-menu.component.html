@@ -1,0 +1,21 @@
+<nav class="header-menu">
+  <ul class="header-list">
+    <li id='filter'>
+      <span class="header-link" (click)="onToggleFilter()"
+        [ngClass]="{clicked: showFilter}">
+        Сортировка запросов
+      </span>
+      <app-query-filter [hidden]="!showFilter"></app-query-filter>
+    </li>
+    <li>
+      <span class="header-link" (click)="onToggleRequestInfo()"
+        [ngClass]="{clicked: showRequestInfo}">
+        Информация о запросе
+      </span>
+      <app-request-info [hidden]="!showRequestInfo"></app-request-info>
+    </li>
+    <li id="history">
+      <a routerLink="history" class="header-link">История</a>
+    </li>
+  </ul>
+</nav>

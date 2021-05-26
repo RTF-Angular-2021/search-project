@@ -1,0 +1,52 @@
+.header-menu {
+    margin-top: 33px;
+} 
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute ;
+    width: max-content;
+    background-color: rgb(39, 39, 39);
+    border-radius: 7px;
+    margin: 0;
+    padding: 8px 0;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.header-list li {
+    margin-left: 7px;
+    margin-bottom: 0;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+#filter {
+    margin-top: 10px;
+}
+
+#history {
+    margin-bottom: 10px
+}
+
+.header-link {
+    display: block;
+    font-size: 16px;
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+    margin: 0px 3px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header-link:hover {
+    background: #404144;
+    transition: all 0.2s ease;
+}
+
+.clicked {
+    background: #404144;
+}

@@ -1,0 +1,19 @@
+<div class="list-wrapper">
+    <div *ngIf="showNfMessage" class="notfound">
+        <div class="nf-title-container">
+            <span class="notfound-title">Ничего не найдено</span>
+        </div>
+    </div>
+    <ul class="search-list">
+        <div *ngIf="isCategory">
+            <li *ngFor="let viewItem of categories">
+                <app-search-item [category]="viewItem"></app-search-item>
+            </li>
+        </div>
+        <div *ngIf="!isCategory">
+            <li *ngFor="let viewItem of channels">
+                <app-search-item-channel [channel]="viewItem"></app-search-item-channel>
+            </li>
+        </div>
+    </ul>
+</div>

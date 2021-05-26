@@ -1,0 +1,23 @@
+<div class="channel-wrapper">
+    <div class="channel">
+        <div class="container-channel-name">
+            <a [href]="'https://www.twitch.tv/' + channel.name" class="channel-name">{{ channel.name }}</a>
+        </div>
+        <div class="container-channel-info">
+            <span>Id: </span>
+            <span>{{ channel.id }}</span>
+        </div>
+        <div class="container-channel-info">
+            <span>Ведется трансляция: </span>
+            <span>{{ channel.isLiveNow }}</span>
+        </div>
+        <div class="container-channel-info">
+            <span>{{ setTitle() }}</span>
+            <span>{{ channel.gameName }}</span>
+        </div>
+        <div class="container-channel-desc">
+            <span>Описание: </span>
+            <span class="channel-desc">{{ channel.description }}</span>
+        </div>
+    </div>
+</div>

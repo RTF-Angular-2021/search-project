@@ -1,0 +1,19 @@
+.not-found-wrapper {
+    background: rgb(39, 39, 39);
+    height: 100px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-top: 50px;
+}
+
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 23px;
+}
+
+.not-found-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}

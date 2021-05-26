@@ -1,0 +1,8 @@
+<div class="container" [formGroup]="formBar">
+    <div class="search-form">
+        <input class="search-input" type="search" placeholder="Search" 
+         (keydown.enter)="changeState(true)" formControlName="queryInput" [(ngModel)]="query">
+        <button class="search-btn" type="submit" (click)="changeState(true)"></button>
+    </div>
+</div>
+<app-search-list *ngIf="twichService.showContent"></app-search-list>

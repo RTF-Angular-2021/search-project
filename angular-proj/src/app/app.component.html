@@ -1,0 +1,16 @@
+<header class="page-header">
+  <div class="container">
+    <div class="wrapper-menu">
+      <div class="burger" (mouseover)="onToggleMenu()" (mouseout)="onToggleMenu()">
+        <span></span>
+        <app-header-menu [hidden]="!showMenu"></app-header-menu>
+      </div>
+    </div>
+    <div class="header-title">
+      <a routerLink="" class="title-link">TwichSearcher</a>
+    </div>
+  </div>
+</header>
+<main class="page-main">
+  <router-outlet></router-outlet>
+</main>

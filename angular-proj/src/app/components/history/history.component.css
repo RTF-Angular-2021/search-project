@@ -1,0 +1,91 @@
+.clear-history {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 40px
+}
+
+.clear-history-btn {
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: rgb(44, 44, 44);
+    border-radius: 7px;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 0.2s ease;
+}
+
+.clear-history-btn:hover { 
+    background: #404144;
+    transition: all 0.2s ease;
+}
+
+.empty-wrapper {
+    background: rgb(39, 39, 39);
+    height: 100px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-top: 50px;
+}
+
+.empty-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 23px;
+}
+
+.empty-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.history-list {
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.history-item-wrapper {
+    background: rgb(39, 39, 39);
+    height: max-content;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin: 20px 0;
+}
+
+.history-item {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.history-title {
+    display: block;
+    width: max-content;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 13px 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.history-title:hover {
+    color: #8359d3;
+    transition: all 0.2s ease;
+}
+
+.container-history-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.container-history-info span {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}

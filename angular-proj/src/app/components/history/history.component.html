@@ -1,0 +1,37 @@
+<div class="history-wrapper">
+    <div *ngIf="history.length > 0" class="clear-history">
+        <button class="clear-history-btn" (click)="removeHistory()">
+            Очистить историю
+        </button>
+    </div>
+    <div *ngIf="history.length === 0" class="empty-wrapper">
+        <div class="empty-container">
+            <span class="empty-title">История пуста</span>
+        </div>
+    </div>
+    <ul class="history-list">
+        <li *ngFor="let item of history.reverse()">
+            <div class="history-item-wrapper">
+                <div class="history-item">
+                    <div class="title-container">
+                        <a routerLink="" [queryParams]="{'query': item.title}" class="history-title" (click)="makeRequest(item)">
+                            {{ item.title }}
+                        </a>
+                    </div>
+                    <div class="container-history-info">
+                        <span>Тип запроса: </span>
+                        <span>{{ item.requestType }}</span>
+                    </div>
+                    <div class="container-history-info">
+                        <span>Число элементов: </span>
+                        <span>{{ item.quantity }}</span>
+                    </div>
+                    <div class="container-history-info">
+                        <span>Тип сортировки: </span>
+                        <span>{{ item.sortType }}</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

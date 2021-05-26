@@ -1,0 +1,21 @@
+<div class="filter-wrapper" [formGroup]="formFilter">
+    <div class="query-type">
+        <div class="radio-wrapper">
+            <input class="radio-input" type="radio" id="radio_1" 
+             value="categories" formControlName="requestType" checked>
+            <label class="radio-label" for="radio_1">Категории</label>
+        </div>
+        <div class="radio-wrapper">
+            <input class="radio-input" type="radio" id="radio_2"
+             value="channels" formControlName="requestType">
+            <label class="radio-label" for="radio_2">Каналы</label>
+        </div>
+    </div>
+    <div class="search-type">
+        <select class="select-search-type" formControlName="sortType">
+            <option value="relevance">Relevance</option>
+            <option value="descending">Descending ID</option>
+            <option value="ascending">Ascending ID</option>
+        </select>
+    </div>
+</div>
