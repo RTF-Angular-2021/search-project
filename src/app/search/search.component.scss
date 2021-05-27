@@ -1,0 +1,69 @@
+.beloremepsum{
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.kaluteraturesom {
+  background: #1c8e64;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: #7BA7AB;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.kaluteraturesom:nth-child(2){
+  background: #224f9c;
+}
+.kaluteraturesom:last-child{
+  background: rgba(123, 167, 171, 0.1);
+}
+
+.nagetap-kopulas {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #211d1d;
+}
+
+.nagetap-kopulas a {
+  color: #7BA7AB;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.dinapiecd-esadsica{
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+}
+.pulabelie-detumpod{
+  all: unset;
+  display: block;
+  margin-left: auto;
+  border: 2.3px solid #f7f0f0;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.5s;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+.pulabelie-detumpod:hover{
+  color:#0a9a65;
+  background: #f3f7f5;
+}
+.kaluteraturesom:nth-child(2) .pulabelie-detumpod:hover{
+  color:#3266bf;
+  background: #f8fdfa;
+}
+.kaluteraturesom:last-child .pulabelie-detumpod:hover{
+  color:#5b2ead;
+  background: #f3f7f5;
+}
+
+strong {
+  font-size: 18px;
+}

@@ -1,0 +1,14 @@
+<div [ngSwitch]="toggle">
+    <div *ngSwitchCase="true" class="beloremepsum" >
+        <div class="kaluteraturesom">
+            <h3 class="nagetap-kopulas"><a target="_blank" href="{{repo.url}}">{{repo.name}}</a></h3>
+            <p class="dinapiecd-esadsica"><strong>Владелец: </strong>{{repo.owner}}</p>
+            <p class="dinapiecd-esadsica"><strong>Описание: </strong>{{repo.description}}</p>
+        </div>
+    </div>
+    <div *ngSwitchCase="false" class="beloremepsum">
+        <div class="kaluteraturesom">
+            <h3 class="nagetap-kopulas"><a target="_blank" href="{{user.url}}">{{user.name}}</a></h3>
+        </div>
+    </div>
+</div>

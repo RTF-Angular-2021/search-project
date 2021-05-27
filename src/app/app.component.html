@@ -1,0 +1,28 @@
+<div class="container">
+  <app-post-form
+    (onAdd)="updatePosts($event)"
+  ></app-post-form>
+</div>
+
+<div style="text-align: center">
+  <div [ngSwitch]="toggle" class="searchCounts">
+    <div *ngSwitchCase="true">
+      <p>Поиск по репозиториям. Количество страниц: {{reposCount}}</p>
+    </div>
+    <div *ngSwitchCase="false">
+      <p>Поиск по пользователям. Количество страниц: {{usersCount}}</p>
+    </div>
+  </div>
+  <button (click)="toggle=true" class="butn">Репозитории</button>
+  <button (click)="toggle=false" class="butn">Пользователи</button>
+</div>
+
+<div class="container con">
+  <app-post
+          [toggle]="toggle"
+          *ngFor="let user of users; let i = index"
+          [user]="users[i]"
+          [repo]="repos[i]"
+  ></app-post>
+</div>
+
