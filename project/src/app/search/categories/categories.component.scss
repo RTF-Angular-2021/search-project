@@ -1,0 +1,19 @@
+.wrapper {
+    background:rgb(154, 21, 187);
+    height: 80px;
+    margin: 20px 0;
+}
+
+.category {
+    padding: 15px;
+}
+
+.name {
+    display: block;
+    width: max-content;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 13px 0;
+    transition: all 0.2s ease;
+}

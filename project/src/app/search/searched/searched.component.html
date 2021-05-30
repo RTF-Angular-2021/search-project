@@ -1,0 +1,8 @@
+<div class="container" [formGroup]="Bar">
+    <div class="search">
+        <input class="input" type="search" placeholder="Что вы хотите найти?" 
+        formControlName="queryInput"  [(ngModel)]="q">
+        <button class="search-btn" type="submit" (click)="change(true)">Поиск</button>
+    </div>
+</div>
+<app-result *ngIf="twichService.showContent"></app-result>

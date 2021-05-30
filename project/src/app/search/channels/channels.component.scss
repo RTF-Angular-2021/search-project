@@ -1,0 +1,40 @@
+.wrapper {
+    background: rgb(154, 21, 187);
+    height: max-content;
+    margin: 20px 0;
+}
+
+.channel {
+    padding: 15px;
+}
+
+.name {
+    display: block;
+    width: max-content;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 13px 0;
+    transition: all 0.2s ease;
+}
+
+.desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+.desc span {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.des {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: auto;
+    text-align: right;
+}
