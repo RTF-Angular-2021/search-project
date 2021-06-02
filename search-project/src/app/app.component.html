@@ -1,0 +1,42 @@
+
+<ul class="history-list">
+  <li>История поиска</li>
+  <li class="history-item" *ngFor="let item of history" (click)="onClick($event)">{{item}}</li>
+  <li><button (click)="ClearHistory($event)">Очистить историю поиска</button></li>
+</ul>
+
+<div class="settings-panel">
+  <h3>Информация по запросу</h3>
+  <p>Кол-во найденных страниц: {{pages.length}}</p>
+  <P>Среднее кол-во страниц: {{averageWordCount}}</P>
+  <h3>Сортировка запросов:</h3>
+  <p>Установка вступит в силу при следующем запросе</p>
+  <select type="dropdown" class="filter">
+    <option value="relevance" selected>По релевантности</option>
+    <option value="last_edit_desc">По Дате изменения/создания (новые-старые)</option>
+    <option value="last_edit_asc">Дате изменения/создания (старые-новые)</option>
+  </select>
+  <Button (click)="SelectFilterOption($event)" class="submit-filter">Принять</Button>
+</div>
+
+
+<a (click)="ShowSettings($event)"><img class="settings" src="../assets/icons8-настройки.gif" ></a>
+<a class="show-history" (click)="ShowHistory($event)"><img class="history" src="../assets/icons8-история-деятельности-100.png"></a>
+
+<div class="container">
+  <form>
+    <button class="search-btn" type="submit" (click)="onClick($event)"></button>
+    <input class="search-input" type="text" placeholder="Искать здесь...">
+  </form>
+  <ul class="list">
+    <li *ngFor="let searchRes of pages">
+        <app-search-item [info]="searchRes"></app-search-item>
+    </li>
+  </ul>
+  <p class="not-found hide">Ничего не найдено</p>
+  <p class="error hide">Произошла ошибка</p>
+  <img class="searching-gif hide" src="../assets/Search.gif">
+</div>
+
+
+
