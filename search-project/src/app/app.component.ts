@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-=======
 import { Component, OnInit } from '@angular/core';
 import {HttpClient } from '@angular/common/http'
 import {SearchResult,QueryObj} from './SearchResult'
->>>>>>> михайловский-евгений
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-<<<<<<< HEAD
-export class AppComponent {
-  title = 'Wiki-app';
-=======
 export class AppComponent implements OnInit{
   title = 'Wiki-app';
   pages:Array<SearchResult>=[];
@@ -125,5 +117,4 @@ export class AppComponent implements OnInit{
       },1000)
     })
   }
->>>>>>> михайловский-евгений
 }

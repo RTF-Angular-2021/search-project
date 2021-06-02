@@ -8,8 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
-<<<<<<< HEAD
-=======
 window.addEventListener('mouseup',function(event){
   const history = document.querySelector('.history-list');
   const settings = document.querySelector('.settings-panel');
@@ -38,6 +36,5 @@ window.addEventListener('mouseup',function(event){
   }
 });  
 
->>>>>>> михайловский-евгений
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
