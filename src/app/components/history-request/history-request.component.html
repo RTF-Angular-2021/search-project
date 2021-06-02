@@ -1,0 +1,23 @@
+<div class="block">
+    <div class="requestList">
+        <div class="requestList_header">История поиска</div>
+        <div *ngIf="requestsArray && requestsArray.length">
+            <div
+                *ngFor="let request of requestsArray"
+                (click)="selectedString.emit(request)"
+                class="requestList_element"
+            >
+                {{ request }}
+            </div>
+        </div>
+    </div>
+    <button
+        (click)="clear.emit()"
+        tuiButton
+        type="button"
+        class="clearButton"
+        size="m"
+    >
+        Очистить историю поиска
+    </button>
+</div>

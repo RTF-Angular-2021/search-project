@@ -1,0 +1,30 @@
+<div class="container field">
+    <div>
+       <tui-input [formControl]="formControl" size="m" class="field">
+        Введите запрос
+    </tui-input> 
+    </div>
+    
+    <div>
+        <tui-select [formControl]="selectedFormControl" size="m" class="field">
+        По чему проводить поиск
+        <tui-data-list-wrapper
+            *tuiDataList
+            [items]="items"
+        ></tui-data-list-wrapper>
+    </tui-select>
+    </div>
+    
+    <div>
+        <button
+        tuiButton
+        type="button"
+        (click)="onSubmit()"
+        style="max-width: 180px"
+        size="m"
+    >
+        Найти
+    </button>
+    </div>
+    
+</div>

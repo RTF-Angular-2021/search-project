@@ -1,0 +1,43 @@
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+.block {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    background-color: white;
+}
+
+.clearButton {
+    max-width: 180px;
+    align-self: center;
+}
+
+.requestList {
+    border: #00587a solid 2px;
+    border-radius: 8%;
+    width: max-content;
+    max-width: 200px;
+    height: 200px;
+    margin-bottom: 8px;
+    overflow-y: scroll;
+}
+
+.requestList::-webkit-scrollbar {
+    width: 0px;
+}
+
+.requestList_header {
+    font-family: "Muli", sans-serif;
+    font-size: 20px;
+    margin: 12px 12px 0px 12px;
+}
+
+.requestList_element {
+    margin: 8px 8px 0px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.requestList_element:hover {
+    background-color: #e7e7de;
+}

@@ -1,0 +1,73 @@
+<app-search-bar
+    (searchChange)="search($event)"
+    [value]="searchValue$ | async"
+></app-search-bar>
+<div class="container">
+    <ng-container *ngIf="users$ | async as users">
+        <div>
+            <div class="textElement">
+                <div *ngIf="users.length; else emptyTemplate">
+                    Количество найденных соответствий:
+                    <span style="color: #f0340f">{{ users.length }}</span>
+                </div>
+                <ng-template #emptyTemplate>
+                    Введите запрос в посиковую строку.
+                </ng-template>
+            </div>
+
+            <ng-container
+                *ngIf="tableData$ | async as tableData"
+                style="margin-top: 12px"
+            >
+                <table tuiTable [columns]="tableData.headers">
+                    <thead>
+                        <ng-container *ngFor="let header of tableData.headers">
+                            <tr tuiThGroup>
+                                <th *tuiHead="header" tuiTh>
+                                    {{ header  }}
+                                </th>
+                            </tr>
+                        </ng-container>
+                        <!-- <ng-container *ngFor="let header of tableData.headers">
+                    <tr tuiThGroup>
+                        <th *tuiHead="header" tuiTh>
+                            {{ header | converterName }}
+                        </th>
+                    </tr>
+                </ng-container> -->
+                    </thead>
+                    <tbody tuiTbody [data]="tableData.rows">
+                        <tr *tuiRow="let row of tableData.rows" tuiTr>
+                            <ng-container
+                                *ngFor="let header of tableData.headers"
+                            >
+                                <td *tuiCell="header">
+                                    <ng-container [ngSwitch]="header">
+                                        <span *ngSwitchCase="'html_url'">
+                                            <a [attr.href]="row[header]">
+                                                {{ row[header] }}
+                                            </a>
+                                        </span>
+                                        <span *ngSwitchDefault>
+                                            {{ row[header] }}
+                                        </span>
+                                    </ng-container>
+                                </td></ng-container
+                            >
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ng-template #emptyTemplate>
+                    Введите запрос в посиковую строку.
+                </ng-template>
+            </ng-container>
+        </div>
+    </ng-container>
+
+    <app-history-request
+        [requestsArray]="historyArray$ | async"
+        (selectedString)="updateValue($event)"
+        (clear)="clearLocalStorage()"
+    ></app-history-request>
+</div>
