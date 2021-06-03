@@ -1,0 +1,17 @@
+<div class="history">
+    <ul class="list">    
+        <h2> История поиска: </h2>
+        <li *ngFor="let item of history">
+            <div class="wrapper">
+                <div class="item">
+                    <div class="title">
+                        <span>{{ item.title }}</span>                        
+                    </div>                    
+                    <div>
+                        <a routerLink="" [queryParams]="{'query': item.title}" class="info"(click)="(item)" >Посмотреть еще раз </a>
+                    </div>              
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

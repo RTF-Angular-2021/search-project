@@ -1,0 +1,41 @@
+.container {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-right: 1000px;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 400px 50px;
+    column-gap: 1px;
+    margin: 0 auto;
+}
+
+.input {
+    padding-left: 13px;
+    outline: none;
+    background: #ff0000;
+    font-size: 16px;
+    color: white;
+    transition: all 0.2s ease;
+    
+}
+
+.input::placeholder {
+    color: white;
+}
+
+.search-input::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.search-btn {
+    top: 0;
+    right: 0px;
+    width: 50px;
+    height: 35px;
+    border: none;
+    background: rgb(0, 255, 0);
+    cursor: pointer;
+}

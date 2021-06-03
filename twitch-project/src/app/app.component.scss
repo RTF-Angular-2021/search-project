@@ -1,0 +1,40 @@
+.header {
+    position: absolute;
+    background-color: #ff0000;
+    height: 75px;
+    width: 100%;
+    z-index: 100;
+    border-radius: 1px;
+    border-radius: 70px;
+}
+
+.main {
+    position: absolute;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.request-setup {
+    margin: auto;
+    margin-left: auto;
+    margin-right: 20vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.history {
+    display: grid;
+    grid-template-rows: 43px 1fr;
+
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+
+
