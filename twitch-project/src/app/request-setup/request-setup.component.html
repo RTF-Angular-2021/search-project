@@ -1,0 +1,20 @@
+<div class="request-setup" [formGroup]="Filter">
+        <div class="search-type">
+        <p>Выберите тип сортировки:</p>
+        <select class="select-search-type" formControlName="sortType">
+            <option value="new">Сначала новые</option>
+            <option value="old">Сначала старые</option>
+            <option value="relevance">Релевантность</option>
+        </select>
+    </div>
+    <div class="type">
+        <p>Тип поиска (канал или категория) ?</p>   
+        <div class="radio">
+            <input class="radio-input" type="radio" id="radio_1" value="categories" formControlName="requestType" checked>
+            <label class="radio-label" for="radio_1">Категории</label>
+            <input class="radio-input" type="radio" id="radio_2" value="channels" formControlName="requestType">
+            <label class="radio-label" for="radio_2">Каналы</label>
+        </div>
+    </div>
+
+</div>

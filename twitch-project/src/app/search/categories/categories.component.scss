@@ -1,0 +1,17 @@
+.wrapper {
+    height: 40px;
+}
+
+.category {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.name {
+    display: block;
+    width: max-content;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}

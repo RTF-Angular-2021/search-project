@@ -1,0 +1,71 @@
+.request-setup {
+    width: 19%;
+    position: absolute;
+    right: 50px;
+    top: 70px;
+    background: rgb(255, 0, 0);
+}
+
+.type {
+    width: 100%;
+	height: 30px;
+    margin-top: 10px;
+	-webkit-appearance: none;
+	background-position: right center;
+	background-repeat: no-repeat;
+	-moz-appearance: none;
+	text-indent: 0.01px; 
+    text-align-last: center;
+    font-family: inherit;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 0, 0);
+    border: none;
+}
+
+.select-search-type {
+	width: 100%;
+	height: 30px;
+    margin-top: 1px;
+	-webkit-appearance: none;
+	background-position: right center;
+	background-repeat: no-repeat;
+	-moz-appearance: none;
+	text-indent: 0.01px; 
+    text-align-last: center;
+    font-family: inherit;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background: rgb(255, 0, 0);
+    border: none;
+}
+
+.select-search-type:hover {
+	background-color: rgb(0, 255, 0);
+}
+
+.radio{
+	cursor: pointer;
+}
+
+.radio-input {
+    display: grid;
+}
+
+.radio-label {
+    width: 92%;
+	display: inline-block;
+	padding: 50px 15px;
+	line-height: 34px;
+	background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 1px;
+}
+
+.radio-label:hover {
+	background-color: rgb(0, 255, 0);
+}
+
+p{
+    color: white;
+}

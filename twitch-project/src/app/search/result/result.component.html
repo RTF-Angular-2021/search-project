@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <ul class="list">
+        <div *ngIf="isCategory">
+            <li *ngFor="let viewItem of categories">
+                <app-categories [category]="viewItem"></app-categories>
+            </li>
+        </div>
+        <div *ngIf="!isCategory">
+            <li *ngFor="let viewItem of channels">
+                <app-channels [channel]="viewItem"></app-channels>
+            </li>
+        </div>
+    </ul>
+</div>
