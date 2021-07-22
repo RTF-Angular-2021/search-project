@@ -11,6 +11,9 @@ export class ResultsItemComponent implements OnInit {
   @Input()
   public set result(value: WikiResponse | null){
     this.res = value?.query?.search;
+    this.res?.forEach( item => {
+      item.snippet += '...';
+    })
   }
   public res: SearchElement[] | undefined;
 
